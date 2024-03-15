@@ -45,9 +45,6 @@ header {
     top: 0;
     background-color: var(--hitam);
     z-index: 1;
-    overflow: hidden;
-
-
 
 }
 
