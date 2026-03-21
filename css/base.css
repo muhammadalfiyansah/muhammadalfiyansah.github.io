@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Base Styles — Reset, Variables, Typography
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Raleway&display=swap');
+
+/* --- Design Tokens --- */
+:root {
+  /* Colors */
+  --color-primary: #28E98C;
+  --color-white: #FFFFFF;
+  --color-dark: #201c1c;
+  --color-dark-nav: #383434;
+  --color-gray: #C2C2C2;
+  --color-border: #454545;
+
+  /* Fonts */
+  --font-display: "Michroma", sans-serif;
+  --font-body: "Raleway", sans-serif;
+
+  /* Fluid Typography — clamp(min, preferred, max) */
+  --fs-hero:    clamp(1.75rem, 4vw + 1rem, 3.5rem);
+  --fs-h2:      clamp(1.25rem, 2vw + 0.5rem, 2.2rem);
+  --fs-h3:      clamp(0.875rem, 1.2vw + 0.3rem, 1.25rem);
+  --fs-h4:      clamp(0.875rem, 1vw + 0.3rem, 1.25rem);
+  --fs-body:    clamp(0.813rem, 0.8vw + 0.3rem, 0.938rem);
+  --fs-small:   clamp(0.7rem, 0.6vw + 0.3rem, 0.813rem);
+  --fs-nav:     clamp(0.688rem, 0.5vw + 0.3rem, 0.75rem);
+
+  /* Spacing */
+  --spacing-section: clamp(1.5rem, 5vw, 4.5rem);
+  --spacing-container: clamp(1rem, 4vw, 7%);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 50px;
+  --radius-pill: 100px;
+
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.4s ease;
+}
+
+/* --- Reset --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  line-height: 1.6;
+  font-size: var(--fs-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Scroll lock for mobile nav */
+body.nav-open {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}

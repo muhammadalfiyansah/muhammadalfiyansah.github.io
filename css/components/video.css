@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Portfolio Video Section — Mobile-first with aspect-ratio
+   ========================================================================== */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 16 / 9) {
+  .video-container {
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+}

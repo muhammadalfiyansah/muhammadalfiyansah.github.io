@@ -1,0 +1,288 @@
+/* ==========================================================================
+   Loader / Splash Screen
+   ========================================================================== */
+
+/* --- Fullscreen Overlay --- */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
+  overflow: hidden;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1),
+              opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Exit animation */
+.loader--hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Lock body scroll while loader is active */
+body.loader-active {
+  overflow: hidden;
+}
+
+/* --- Content wrapper --- */
+.loader__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* --- Greeting line --- */
+.loader__greeting {
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 1vw + 0.3rem, 0.95rem);
+  color: var(--color-primary);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: loaderFadeUp 0.6s 0.2s ease forwards;
+}
+
+/* --- Name letters --- */
+.loader__name {
+  display: flex;
+  justify-content: center;
+  gap: clamp(2px, 0.5vw, 6px);
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.loader__letter {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw + 0.5rem, 5rem);
+  font-weight: 700;
+  color: var(--color-white);
+  opacity: 0;
+  transform: translateY(60px) rotateX(90deg);
+  display: inline-block;
+  animation: loaderLetterIn 0.5s ease forwards;
+  text-shadow: 0 0 20px rgba(40, 233, 140, 0);
+  transition: text-shadow 0.4s ease;
+}
+
+.loader__letter.is-space {
+  width: clamp(10px, 2vw, 24px);
+}
+
+.loader__letter.is-revealed {
+  text-shadow: 0 0 30px rgba(40, 233, 140, 0.4),
+               0 0 60px rgba(40, 233, 140, 0.15);
+}
+
+/* --- Animated line under name --- */
+.loader__line {
+  width: clamp(80px, 20vw, 200px);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  opacity: 0;
+  animation: loaderFadeUp 0.6s 0.6s ease forwards;
+  position: relative;
+}
+
+.loader__line::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 30%;
+  height: 6px;
+  background: var(--color-primary);
+  border-radius: 3px;
+  filter: blur(3px);
+  animation: loaderLineSweep 1.5s 0.8s ease-in-out infinite;
+}
+
+/* --- Subtitle --- */
+.loader__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.65rem, 0.8vw + 0.3rem, 0.85rem);
+  color: var(--color-gray);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: loaderFadeUp 0.6s 1s ease forwards;
+}
+
+/* --- Progress bar --- */
+.loader__progress {
+  width: clamp(180px, 40vw, 320px);
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  overflow: hidden;
+  opacity: 0;
+  animation: loaderFadeUp 0.4s 1.2s ease forwards;
+}
+
+.loader__progress-fill {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), #5dffa8);
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(40, 233, 140, 0.5);
+  transition: width 0.1s linear;
+}
+
+/* --- Percentage counter --- */
+.loader__percent {
+  font-family: var(--font-display);
+  font-size: clamp(0.7rem, 0.9vw + 0.2rem, 0.85rem);
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: loaderFadeUp 0.4s 1.2s ease forwards;
+}
+
+/* --- Floating particles --- */
+.loader__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.loader__particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0;
+  animation: loaderParticleFloat linear infinite;
+}
+
+.loader__particle:nth-child(1) {
+  width: 4px; height: 4px;
+  left: 10%; bottom: -10px;
+  animation-duration: 6s; animation-delay: 0s;
+}
+.loader__particle:nth-child(2) {
+  width: 6px; height: 6px;
+  left: 25%; bottom: -10px;
+  animation-duration: 8s; animation-delay: 0.5s;
+}
+.loader__particle:nth-child(3) {
+  width: 3px; height: 3px;
+  left: 45%; bottom: -10px;
+  animation-duration: 5s; animation-delay: 1s;
+}
+.loader__particle:nth-child(4) {
+  width: 5px; height: 5px;
+  left: 65%; bottom: -10px;
+  animation-duration: 7s; animation-delay: 0.3s;
+}
+.loader__particle:nth-child(5) {
+  width: 4px; height: 4px;
+  left: 80%; bottom: -10px;
+  animation-duration: 6.5s; animation-delay: 0.8s;
+}
+.loader__particle:nth-child(6) {
+  width: 3px; height: 3px;
+  left: 35%; bottom: -10px;
+  animation-duration: 9s; animation-delay: 1.5s;
+}
+.loader__particle:nth-child(7) {
+  width: 5px; height: 5px;
+  left: 55%; bottom: -10px;
+  animation-duration: 7.5s; animation-delay: 0.2s;
+}
+.loader__particle:nth-child(8) {
+  width: 3px; height: 3px;
+  left: 90%; bottom: -10px;
+  animation-duration: 6s; animation-delay: 1.2s;
+}
+
+/* --- Corner accents --- */
+.loader__corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  opacity: 0;
+  animation: loaderFadeUp 0.6s 0.4s ease forwards;
+}
+
+.loader__corner::before,
+.loader__corner::after {
+  content: '';
+  position: absolute;
+  background: var(--color-primary);
+}
+
+.loader__corner--tl {
+  top: clamp(20px, 4vw, 50px);
+  left: clamp(20px, 4vw, 50px);
+}
+.loader__corner--tl::before { top: 0; left: 0; width: 20px; height: 1px; }
+.loader__corner--tl::after  { top: 0; left: 0; width: 1px; height: 20px; }
+
+.loader__corner--tr {
+  top: clamp(20px, 4vw, 50px);
+  right: clamp(20px, 4vw, 50px);
+}
+.loader__corner--tr::before { top: 0; right: 0; width: 20px; height: 1px; }
+.loader__corner--tr::after  { top: 0; right: 0; width: 1px; height: 20px; }
+
+.loader__corner--bl {
+  bottom: clamp(20px, 4vw, 50px);
+  left: clamp(20px, 4vw, 50px);
+}
+.loader__corner--bl::before { bottom: 0; left: 0; width: 20px; height: 1px; }
+.loader__corner--bl::after  { bottom: 0; left: 0; width: 1px; height: 20px; }
+
+.loader__corner--br {
+  bottom: clamp(20px, 4vw, 50px);
+  right: clamp(20px, 4vw, 50px);
+}
+.loader__corner--br::before { bottom: 0; right: 0; width: 20px; height: 1px; }
+.loader__corner--br::after  { bottom: 0; right: 0; width: 1px; height: 20px; }
+
+/* ==========================================================================
+   Keyframes
+   ========================================================================== */
+
+@keyframes loaderLetterIn {
+  0%   { opacity: 0; transform: translateY(60px) rotateX(90deg); }
+  60%  { opacity: 1; transform: translateY(-5px) rotateX(-5deg); }
+  100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
+}
+
+@keyframes loaderFadeUp {
+  0%   { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes loaderLineSweep {
+  0%   { left: -30%; }
+  100% { left: 100%; }
+}
+
+@keyframes loaderParticleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100vh) scale(1.2);
+  }
+}

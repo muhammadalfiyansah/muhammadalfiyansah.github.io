@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Clients Section — Infinite Horizontal Marquee — Mobile-first
+   ========================================================================== */
+
+/* --- Marquee Container --- */
+.clients__marquee {
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* --- Sliding Track --- */
+.clients__track {
+  display: flex;
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.clients__track:hover {
+  animation-play-state: paused;
+}
+
+/* --- Logo Sizing --- */
+.clients__track img {
+  height: auto;
+  flex-shrink: 0;
+  filter: grayscale(30%) brightness(0.95);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.clients__track img:hover {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.12);
+}
+
+.clients__track img.client--maiso      { width: clamp(70px, 10vw, 120px); }
+.clients__track img.client--tbs        { width: clamp(80px, 12vw, 150px); }
+.clients__track img.client--robin      { width: clamp(100px, 15vw, 180px); }
+.clients__track img.client--spaylatter { width: clamp(120px, 18vw, 220px); }
+
+/* --- Keyframes --- */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- Accessibility: Reduce Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .clients__track {
+    animation: none;
+  }
+}

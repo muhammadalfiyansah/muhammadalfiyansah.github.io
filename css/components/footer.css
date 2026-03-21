@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Footer — Mobile-first
+   ========================================================================== */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer p {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+  font-weight: 400;
+  text-align: center;
+}

@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Detail Page — Certificate & Portfolio detail view — Mobile-first
+   ========================================================================== */
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  min-height: 60vh;
+  padding: 1rem 0;
+}
+
+.detail-container h1 {
+  color: var(--color-primary);
+  font-size: var(--fs-h3);
+  font-weight: 400;
+}
+
+.detail-container p {
+  color: var(--color-gray);
+  font-size: var(--fs-body);
+  max-width: 600px;
+}
+
+.detail-container img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.detail__icon {
+  font-size: clamp(3rem, 6vw, 5rem);
+  padding: 1.875rem;
+}
+
+/* --- Back Button --- */
+.btn-back {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  padding: 0.625rem 1.75rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-back:hover {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+}

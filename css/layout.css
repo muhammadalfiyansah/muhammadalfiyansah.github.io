@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Layout Utilities — Container, Row, Spacing
+   Mobile-first with standard breakpoints: 576, 768, 992, 1200
+   ========================================================================== */
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Responsive Container --- */
+.container {
+  width: 100%;
+  max-width: 1330px;
+  padding-inline: var(--spacing-container);
+  margin-inline: auto;
+}
+
+/* --- Row — mobile-first: wrap by default --- */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.align-items-center {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Section Spacing --- */
+.margin-top {
+  margin-top: var(--spacing-section);
+}
+
+/* --- Background Pattern (shared) --- */
+.bg-pattern {
+  background-color: var(--color-dark-nav);
+  background-image: url(../assets/images/bg-cover.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* --- Section Title Styles --- */
+.section-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(1rem, 2vw, 1.875rem) 0;
+}
+
+.section-title h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--fs-h2);
+  color: var(--color-white);
+}
+
+.section-subtitle {
+  padding-bottom: clamp(1.5rem, 3vw, 3.125rem);
+}
+
+.section-subtitle h2 {
+  color: var(--color-primary);
+  font-size: var(--fs-h3);
+  font-weight: 400;
+}
+
+/* --- Desktop: unwrap rows --- */
+@media (min-width: 768px) {
+  .row {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Security Meta Tags -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://img.youtube.com data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="camera=(), microphone=(), geolocation=()"
+    />
+
+    <meta
+      name="description"
+      content="Portfolio Muhammad Alfi Yansah — Experienced professional in desk collection, CCTV operations, and admin online. Skills in HTML, CSS, WordPress, Adobe Premiere Pro, and more."
+    />
+    <title>Portfolio — Muhammad Alfi Yansah</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="loader-active">
+    <!-- ===================== LOADER / SPLASH SCREEN ===================== -->
+    <div class="loader" id="loader">
+      <!-- Corner accents -->
+      <div class="loader__corner loader__corner--tl"></div>
+      <div class="loader__corner loader__corner--tr"></div>
+      <div class="loader__corner loader__corner--bl"></div>
+      <div class="loader__corner loader__corner--br"></div>
+
+      <!-- Main content -->
+      <div class="loader__content">
+        <p class="loader__greeting">Welcome to my portfolio</p>
+        <div class="loader__name"></div>
+        <div class="loader__line"></div>
+        <p class="loader__subtitle">Loading Experience</p>
+        <div class="loader__progress">
+          <div class="loader__progress-fill"></div>
+        </div>
+        <p class="loader__percent">0%</p>
+      </div>
+
+      <!-- Floating particles -->
+      <div class="loader__particles">
+        <div class="loader__particle"></div>
+        <div class="loader__particle"></div>
+        <div class="loader__particle"></div>
+        <div class="loader__particle"></div>
+        <div class="loader__particle"></div>
+        <div class="loader__particle"></div>
+        <div class="loader__particle"></div>
+        <div class="loader__particle"></div>
+      </div>
+    </div>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="logo">
+            <h1>Portfolio</h1>
+            <p>Alfi Yansah</p>
+          </div>
+
+          <nav class="nav" id="main-nav" aria-label="Main navigation">
+            <ul>
+              <li><a href="#top">HOME</a></li>
+              <li><a href="#skill">SKILL</a></li>
+              <li><a href="#experience">EXPERIENCE</a></li>
+              <li><a href="#education">EDUCATION</a></li>
+              <li><a href="#certificate">CERTIFICATE</a></li>
+              <li>
+                <a href="#certificate" data-activate-tab="portfolio-panel"
+                  >PORTFOLIO</a
+                >
+              </li>
+              <li><a href="#contact">CONTACT</a></li>
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1JlZvYPbX3_aFbBB_oKbc2Oon_0YJh4sc/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  DOWNLOAD <span>CV</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            class="hamburger"
+            type="button"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main id="top">
+      <!-- ===== PROFILE / HERO ===== -->
+      <section id="profile">
+        <div class="container margin-top">
+          <div class="row">
+            <div class="hero__name">
+              <h1>I'M</h1>
+              <h1>Muhammad</h1>
+              <h2>Alfi Yansah</h2>
+              <p class="hero__bio">
+                Saya berumur 26 tahun, saya anak pertama dari empat bersaudara,
+                lulusan SMK Muhammadiyah 2. Saya mudah beradaptasi, dapat
+                bekerja keras, bekerja sama dalam tim, teliti, mudah
+                berkomunikasi dengan orang lain serta senang mempelajari hal
+                baru.
+              </p>
+            </div>
+            <div class="hero__avatar">
+              <img
+                src="assets/images/profile-avatar.jpg"
+                alt="Muhammad Alfi Yansah — Profile photo"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="hero__cta">
+            <div class="btn-outline">
+              <a
+                href="https://wa.me/+6285893509840"
+                target="_blank"
+                rel="noopener noreferrer"
+                >WhatsApp</a
+              >
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="vision-mission">
+              <h3>Vision</h3>
+              <p>
+                Visi saya dalam berkerja adalah menjadi pegawai yang
+                profesional, tangguh, bertanggung jawab dan peduli secara sosial
+                pada perusahaan.
+              </p>
+            </div>
+            <div class="vision-mission vision-mission__mission">
+              <h3>Mission</h3>
+              <p>
+                Selalu memperbarui karakter pribadi menjadi lebih profesional,
+                komitmen, tanggung jawab dan setia pada perusahaan.
+                Mengembangkan perusahaan menjadi lebih maju sesuai kapasitas
+                saya.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section class="bg-pattern margin-top" id="skill">
+        <div class="container">
+          <div class="section-title">
+            <h2>Software Skills</h2>
+          </div>
+
+          <div class="row center-img">
+            <div class="skill-icon">
+              <img
+                src="assets/images/skill-html.png"
+                alt="HTML"
+                loading="lazy"
+              />
+              <p>Html</p>
+            </div>
+            <div class="skill-icon">
+              <img src="assets/images/skill-css.png" alt="CSS" loading="lazy" />
+              <p>Css</p>
+            </div>
+            <div class="skill-icon">
+              <img
+                src="assets/images/skill-wordpress.png"
+                alt="WordPress"
+                loading="lazy"
+              />
+              <p>Wordpress</p>
+            </div>
+            <div class="skill-icon">
+              <img
+                src="assets/images/skill-premiere.png"
+                alt="Adobe Premiere Pro"
+                loading="lazy"
+              />
+              <p>Adobe Premiere Pro</p>
+            </div>
+            <div class="skill-icon">
+              <img
+                src="assets/images/skill-photoshop.png"
+                alt="Adobe Photoshop"
+                loading="lazy"
+              />
+              <p>Adobe PhotoShop</p>
+            </div>
+            <div class="skill-icon">
+              <img
+                src="assets/images/skill-excel.png"
+                alt="Microsoft Excel"
+                loading="lazy"
+              />
+              <p>Microsoft Excel</p>
+            </div>
+            <div class="skill-icon">
+              <img
+                src="assets/images/skill-word.png"
+                alt="Microsoft Word"
+                loading="lazy"
+              />
+              <p>Microsoft Word</p>
+            </div>
+            <div class="skill-icon">
+              <img
+                src="assets/images/skill-sheets.png"
+                alt="Google Sheets"
+                loading="lazy"
+              />
+              <p>Google Sheets</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE ===== -->
+      <section id="experience">
+        <div class="container margin-top">
+          <div class="section-subtitle">
+            <h2>Experience</h2>
+          </div>
+
+          <div class="row">
+            <div class="experience__image">
+              <img
+                src="assets/images/profile-photo.png"
+                alt="Alfi Yansah — Professional photo"
+                loading="lazy"
+              />
+              <div class="experience__overlay"></div>
+              <div class="experience__border"></div>
+            </div>
+
+            <div class="experience__timeline">
+              <article class="experience__item">
+                <h3>2024 - 2026</h3>
+                <h4>PT. Commerce Finance (Spaylatter/Shopee)</h4>
+                <h5>Desk Collection</h5>
+                <p>
+                  Menginformasikan, mengingatkan nasabah jatuh tempo pembayaran
+                  User (auto dial)
+                </p>
+                <p>
+                  Menitip pesan pada kontak darurat EC UC atau pun EC DS untuk
+                  tolong sampaikan pada USER merespon panggilan
+                </p>
+                <p>
+                  Follow up PTP yang sudah di dapatkan menggunakan DC System
+                  telepon dan WhatsApp
+                </p>
+                <p>Memindahkan data user ke Google Sheet</p>
+              </article>
+
+              <article class="experience__item">
+                <h3>2023 - 2024</h3>
+                <h4>PT. Lintas Semesta (Cantik Group/Maiso)</h4>
+                <h5>Operation CCTV</h5>
+                <p>Memantau CCTV seluruh store</p>
+                <p>
+                  Mencari kejanggalan seperti manualan scan, pencurian barang
+                  dan memantau crew toko sesuai SOP pekerjaan
+                </p>
+                <p>
+                  Membuat laporan monitoring harian dan mingguan menggunakan Ms.
+                  Excel
+                </p>
+                <p>
+                  Menginformasikan tim IT jika kouta modem store sudah habis
+                  atau modem internet mengalami kerusakan
+                </p>
+              </article>
+
+              <article class="experience__item">
+                <h3>2021 - 2023</h3>
+                <h4>PT. Majapahit Solusi Bersama (My Robin)</h4>
+                <h5>Admin Online</h5>
+                <p>
+                  Menayani chat customer yang masuk kesistem dari hasil FB Ads,
+                  IG Ads dan Google Ads
+                </p>
+                <p>Membuat data orderan di Google Sheet</p>
+              </article>
+
+              <article class="experience__item">
+                <h3>2020 - 2021</h3>
+                <h4>PT. Tritunggal Buana Sejahtera</h4>
+                <h5>Desk Collection</h5>
+                <p>
+                  Menginformasikan atau mengingatkan nasabah yang jatuh tempo
+                  pembayaran melalui telepon
+                </p>
+                <p>
+                  Membuat data pembayaran harian dan bulanan melalui MS. Excel
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EDUCATION ===== -->
+      <section class="bg-pattern margin-top" id="education">
+        <div class="container">
+          <div class="section-title">
+            <h2>Education</h2>
+          </div>
+
+          <div class="row">
+            <div class="education__left">
+              <div class="flip-card">
+                <div class="flip-card__inner">
+                  <div class="flip-card__front">
+                    <ion-icon
+                      name="checkmark-done-circle"
+                      class="flip-card__icon--smk"
+                    ></ion-icon>
+                    <h3>2015 - 2018</h3>
+                    <p>SMK</p>
+                  </div>
+                  <div class="flip-card__back">
+                    <h3>SMK MUHAMMADIYAH 2</h3>
+                    <p>ADMINISTRASI PERKANTORAN - LULUS</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flip-card">
+                <div class="flip-card__inner">
+                  <div class="flip-card__front">
+                    <ion-icon
+                      name="checkmark-done-circle"
+                      class="flip-card__icon--sdn"
+                    ></ion-icon>
+                    <h3>2006 - 2012</h3>
+                    <p>SDN</p>
+                  </div>
+                  <div class="flip-card__back">
+                    <h3>SDN PONDOK JAYA 03</h3>
+                    <p>LULUS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="education__right">
+              <div class="flip-card">
+                <div class="flip-card__inner">
+                  <div class="flip-card__front">
+                    <ion-icon
+                      name="checkmark-done-circle"
+                      class="flip-card__icon--mts"
+                    ></ion-icon>
+                    <h3>2012 - 2015</h3>
+                    <p>MTS</p>
+                  </div>
+                  <div class="flip-card__back">
+                    <h3>MTS AL - SA'ADAH</h3>
+                    <p>LULUS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CERTIFICATE & PORTFOLIO ===== -->
+      <section id="certificate">
+        <div class="container margin-top">
+          <div class="section-subtitle">
+            <h2>Certificate And Portfolio</h2>
+          </div>
+
+          <div class="cp-toggle-btns">
+            <button
+              class="cp-toggle-btn tab-active"
+              data-tab="certificate-panel"
+              id="btn-certificate"
+            >
+              Certificate
+            </button>
+            <button
+              class="cp-toggle-btn"
+              data-tab="portfolio-panel"
+              id="btn-portfolio"
+            >
+              Portfolio
+            </button>
+          </div>
+
+          <!-- Certificate Panel -->
+          <div class="cp-panel tab-active" id="certificate-panel">
+            <div class="cp-cards">
+              <a class="cp-card" href="detail/certificate-1.html">
+                <div class="cp-card__image">
+                  <img
+                    src="assets/images/certificate-work.jpg"
+                    alt="Surat Pengalaman Kerja"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="cp-card__title">
+                  <h3>Certificate</h3>
+                  <p>Paklaring Kerja Admin Online</p>
+                </div>
+              </a>
+
+              <a class="cp-card" href="detail/certificate-2.html">
+                <div class="cp-card__image">
+                  <img
+                    src="assets/images/Certificate Deskcollection.png"
+                    alt="Sertifikat Pelatihan"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="cp-card__title">
+                  <h3>Certificate</h3>
+                  <p>Apresiasi Deskcollection</p>
+                </div>
+              </a>
+
+              <a class="cp-card" href="detail/certificate-3.html">
+                <div class="cp-card__image">
+                  <img
+                    src="assets/images/certificate-work.jpg"
+                    alt="Paklaring Kerja"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="cp-card__title">
+                  <h3>Certificate 3</h3>
+                  <p>Paklaring Kerja</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Portfolio Panel -->
+          <div class="cp-panel" id="portfolio-panel">
+            <div class="cp-cards">
+              <a class="cp-card" href="detail/portfolio-1.html">
+                <div class="cp-card__image">
+                  <div class="cp-card__placeholder">
+                    <span>🌐</span>
+                  </div>
+                </div>
+                <div class="cp-card__title">
+                  <h3>Portfolio Website</h3>
+                  <p>Personal portfolio menggunakan HTML & CSS</p>
+                </div>
+              </a>
+
+              <a class="cp-card" href="detail/portfolio-2.html">
+                <div class="cp-card__image">
+                  <img
+                    src="https://img.youtube.com/vi/GL6uX6eyry0/hqdefault.jpg"
+                    alt="Video Editing Portfolio"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="cp-card__title">
+                  <h3>Video Editing</h3>
+                  <p>Project video editing dengan Adobe Premiere</p>
+                </div>
+              </a>
+
+              <a class="cp-card" href="detail/portfolio-3.html">
+                <div class="cp-card__image">
+                  <div class="cp-card__placeholder">
+                    <span>📊</span>
+                  </div>
+                </div>
+                <div class="cp-card__title">
+                  <h3>Data Report</h3>
+                  <p>Laporan data menggunakan Google Sheets</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MY CLIENTS ===== -->
+      <section class="bg-pattern margin-top">
+        <div class="container">
+          <div class="section-title">
+            <h2>My Clients</h2>
+          </div>
+
+          <div class="clients__marquee">
+            <div class="clients__track">
+              <!-- Set 1 -->
+              <img
+                src="assets/images/client-maiso.png"
+                alt="Maiso"
+                class="client--maiso"
+                loading="lazy"
+              />
+              <img
+                src="assets/images/client-tbs.png"
+                alt="TBS"
+                class="client--tbs"
+                loading="lazy"
+              />
+              <img
+                src="assets/images/client-robin.png"
+                alt="My Robin"
+                class="client--robin"
+                loading="lazy"
+              />
+              <img
+                src="assets/images/client-spaylatter.png"
+                alt="Spaylatter"
+                class="client--spaylatter"
+                loading="lazy"
+              />
+              <!-- Set 2 (duplicate for seamless loop) -->
+              <img
+                src="assets/images/client-maiso.png"
+                alt="Maiso"
+                class="client--maiso"
+                loading="lazy"
+              />
+              <img
+                src="assets/images/client-tbs.png"
+                alt="TBS"
+                class="client--tbs"
+                loading="lazy"
+              />
+              <img
+                src="assets/images/client-robin.png"
+                alt="My Robin"
+                class="client--robin"
+                loading="lazy"
+              />
+              <img
+                src="assets/images/client-spaylatter.png"
+                alt="Spaylatter"
+                class="client--spaylatter"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact">
+        <div class="container margin-top">
+          <div class="section-subtitle">
+            <h2>Contact Me</h2>
+          </div>
+
+          <div class="row">
+            <div class="contact__heading">
+              <h2>Let's Work Together, Get In Touch!</h2>
+            </div>
+
+            <div class="contact__form-wrapper">
+              <div class="form-card">
+                <div class="form-card__inner">
+                  <form class="contact-form bg-pattern" name="contact-form">
+                    <p class="contact-form__title">Get In Touch</p>
+
+                    <!-- Success Alert -->
+                    <div class="alert-success" id="alert-success">
+                      <div class="alert-success__icon">
+                        <svg
+                          fill="none"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            clip-rule="evenodd"
+                            d="m12 1c-6.075 0-11 4.925-11 11s4.925 11 11 11 11-4.925 11-11-4.925-11-11-11zm4.768 9.14c.0878-.1004.1546-.21726.1966-.34383.0419-.12657.0581-.26026.0477-.39319-.0105-.13293-.0475-.26242-.1087-.38085-.0613-.11844-.1456-.22342-.2481-.30879-.1024-.08536-.2209-.14938-.3484-.18828s-.2616-.0519-.3942-.03823c-.1327.01366-.2612.05372-.3782.1178-.1169.06409-.2198.15091-.3027.25537l-4.3 5.159-2.225-2.226c-.1886-.1822-.4412-.283-.7034-.2807s-.51301.1075-.69842.2929-.29058.4362-.29285.6984c-.00228.2622.09851.5148.28067.7034l3 3c.0983.0982.2159.1748.3454.2251.1295.0502.2681.0729.4069.0665.1387-.0063.2747-.0414.3991-.1032.1244-.0617.2347-.1487.3236-.2554z"
+                            fill="#393a37"
+                            fill-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="alert-success__text">
+                        Your message has been sent.
+                      </div>
+                      <div class="alert-success__close" id="alert-close">
+                        <svg
+                          height="20"
+                          viewBox="0 0 20 20"
+                          width="20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
+                            fill="#393a37"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <div class="contact-form__field">
+                      <input
+                        required
+                        placeholder="Name"
+                        class="contact-form__input"
+                        type="text"
+                        name="name"
+                      />
+                    </div>
+                    <div class="contact-form__field">
+                      <input
+                        required
+                        placeholder="Email"
+                        class="contact-form__input"
+                        type="email"
+                        name="email"
+                      />
+                    </div>
+                    <div class="contact-form__field">
+                      <input
+                        required
+                        placeholder="Subject"
+                        class="contact-form__input"
+                        type="text"
+                        name="subject"
+                      />
+                    </div>
+                    <div class="contact-form__field">
+                      <textarea
+                        required
+                        placeholder="Message"
+                        cols="30"
+                        rows="3"
+                        class="contact-form__input"
+                        name="message"
+                      ></textarea>
+                    </div>
+
+                    <button class="btn-submit" type="submit" id="btn-submit">
+                      Send Message
+                    </button>
+                    <button class="btn-loading" type="button" id="btn-loading">
+                      Loading
+                      <div class="loading-ripple">
+                        <div></div>
+                        <div></div>
+                      </div>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <div class="container margin-top">
+        <div class="footer">
+          <p>© 2026 Created With Portfolio Muhammad Alfi Yansah</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      integrity="sha384-xyQ/Vpt1cq1pdPYlRaT/QkcSj2vrYyWI3WOhxGBzqnP1vgvsS2yrhWXe3/wIoCr5"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

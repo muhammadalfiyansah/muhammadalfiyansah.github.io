@@ -1,0 +1,154 @@
+/* ==========================================================================
+   Hero / Profile Section — Mobile-first
+   ========================================================================== */
+
+/* --- Hero Name --- */
+.hero__name {
+  width: 100%;
+}
+
+.hero__name h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-white);
+  font-size: var(--fs-hero);
+}
+
+.hero__name h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-primary);
+  font-size: var(--fs-hero);
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+}
+
+/* --- Typing Animation --- */
+.hero__name h2::before,
+.hero__name h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero__name h2::before {
+  background-color: var(--color-dark);
+  animation: typing 4s steps(24) 1s forwards;
+}
+
+.hero__name h2::after {
+  width: 2px;
+  background-color: var(--color-primary);
+  animation:
+    typing 4s steps(24) 1s forwards,
+    blink 650ms steps(24) infinite;
+}
+
+@keyframes typing {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+/* --- Bio --- */
+.hero__bio {
+  font-weight: 400;
+  color: var(--color-gray);
+  font-size: var(--fs-body);
+  padding-top: 1.5rem;
+  width: 100%;
+}
+
+/* --- Avatar --- */
+.hero__avatar {
+  margin: auto 0;
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.hero__avatar img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 150px 0 150px 0;
+  margin: 0 auto;
+}
+
+/* --- CTA Button --- */
+.hero__cta {
+  padding-top: 1.5rem;
+}
+
+.btn-outline {
+  border: 1px solid var(--color-border);
+  width: clamp(140px, 15vw, 180px);
+  height: clamp(45px, 5vw, 55px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-pill);
+}
+
+.btn-outline a {
+  font-weight: bold;
+  font-size: var(--fs-body);
+  color: var(--color-dark);
+  width: clamp(115px, 13vw, 150px);
+  height: clamp(32px, 4vw, 40px);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-pill);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Vision / Mission --- */
+.vision-mission {
+  width: 100%;
+}
+
+.vision-mission h3 {
+  font-size: var(--fs-h3);
+  color: var(--color-primary);
+  font-weight: 400;
+  padding: 0.75rem 0;
+}
+
+.vision-mission p {
+  font-size: var(--fs-body);
+  color: var(--color-gray);
+  font-weight: 400;
+}
+
+/* --- Desktop: 768px+ --- */
+@media (min-width: 768px) {
+  .hero__name {
+    width: 60%;
+  }
+
+  .hero__avatar {
+    width: 40%;
+    padding-top: 0;
+  }
+
+  .hero__bio {
+    width: 80%;
+  }
+
+  .vision-mission {
+    width: 50%;
+  }
+
+  .vision-mission:last-child {
+    margin-left: auto;
+  }
+}

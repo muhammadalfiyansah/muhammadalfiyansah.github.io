@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Certificate & Portfolio Section — Tabs + Cards — Mobile-first
+   ========================================================================== */
+
+/* --- Toggle Buttons --- */
+.cp-toggle-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  flex-wrap: wrap;
+}
+
+.cp-toggle-btn {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  padding: 0.625rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.cp-toggle-btn:hover {
+  background-color: rgba(40, 233, 140, 0.15);
+  box-shadow: 0 0 15px rgba(40, 233, 140, 0.2);
+}
+
+.cp-toggle-btn.tab-active {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  box-shadow: 0 4px 20px rgba(40, 233, 140, 0.3);
+}
+
+/* --- Panels --- */
+.cp-panel {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+.cp-panel.tab-active {
+  opacity: 1;
+  max-height: 2000px;
+  overflow: visible;
+}
+
+/* --- Card Grid — auto-fill responsive --- */
+.cp-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* --- Individual Card --- */
+.cp-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  background-color: var(--color-dark-nav);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-medium);
+  position: relative;
+}
+
+.cp-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 30px rgba(40, 233, 140, 0.2);
+}
+
+.cp-card:active {
+  transform: translateY(-4px) scale(0.98);
+}
+
+/* --- Card Image --- */
+.cp-card__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--color-dark);
+}
+
+.cp-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-medium);
+}
+
+.cp-card:hover .cp-card__image img {
+  transform: scale(1.08);
+}
+
+/* --- Card Placeholder --- */
+.cp-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-nav) 100%);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cp-card__placeholder span {
+  font-size: 64px;
+  transition: transform var(--transition-medium);
+}
+
+.cp-card:hover .cp-card__placeholder span {
+  transform: scale(1.15);
+}
+
+/* --- Card Video Embed --- */
+.cp-card__video {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cp-card__video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* --- Card Title --- */
+.cp-card__title {
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+
+.cp-card__title h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: 0.375rem;
+}
+
+.cp-card__title p {
+  font-size: var(--fs-small);
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+/* --- Tablet: 2 cards per row --- */
+@media (min-width: 576px) {
+  .cp-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Desktop: 3 cards per row --- */
+@media (min-width: 992px) {
+  .cp-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
