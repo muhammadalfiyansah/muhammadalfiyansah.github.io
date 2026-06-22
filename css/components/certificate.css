@@ -43,7 +43,9 @@
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.5s ease, max-height 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    max-height 0.5s ease;
 }
 
 .cp-panel.tab-active {
@@ -54,8 +56,9 @@
 
 /* --- Card Grid — auto-fill responsive --- */
 .cp-cards {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 }
 
@@ -65,6 +68,7 @@
   text-decoration: none;
   color: inherit;
   width: 100%;
+  max-width: 380px;
   background-color: var(--color-dark-nav);
   border: 1px solid var(--color-border);
   border-radius: 16px;
@@ -110,7 +114,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-nav) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-dark) 0%,
+    var(--color-dark-nav) 100%
+  );
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -157,16 +165,3 @@
   color: var(--color-gray);
 }
 
-/* --- Tablet: 2 cards per row --- */
-@media (min-width: 576px) {
-  .cp-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* --- Desktop: 3 cards per row --- */
-@media (min-width: 992px) {
-  .cp-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
